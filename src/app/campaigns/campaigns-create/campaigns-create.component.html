@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="create-campaign flex-col-center">
+    <h1>Kampanya Oluştur</h1>
+    <form
+      class="form flex-col-center"
+      (submit)="onSubmit(campaignCreateForm)"
+      #campaignCreateForm="ngForm"
+    >
+      <div class="form-input">
+        <label for="campaignName">Kampanya İsmi</label>
+        <input
+          id="campaignTitle"
+          name="campaignTitle"
+          [(ngModel)]="campaign.title"
+          type="text"
+        />
+      </div>
+      <div class="form-input">
+        <label for="campaignDescription">Kampanya Açıklaması</label>
+        <textarea
+          id="campaignDescription"
+          name="campaignDescription"
+          [(ngModel)]="campaign.description"
+        ></textarea>
+      </div>
+      <button type="submit">Oluştur</button>
+    </form>
+  </div>
+</div>

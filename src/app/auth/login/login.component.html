@@ -1,0 +1,47 @@
+<div class="login-wrapper flex-row-center">
+  <div class="form-wrapper flex-col-center">
+    <h1>Moneytolia</h1>
+    <form
+      class="form flex-col-center"
+      (submit)="onSubmit(loginForm)"
+      #loginForm="ngForm"
+    >
+      <div class="form-inputs">
+        <div class="form-input">
+          <input
+            type="text"
+            placeholder="Kullanıcı Adı"
+            name="username"
+            [(ngModel)]="user.name"
+            #username="ngModel"
+            required
+          />
+          <!-- Error -->
+          <div class="error" *ngIf="username.invalid">
+            <small *ngIf="username.touched && username.errors?.['required']">
+              Bu alan boş bırakılamaz
+            </small>
+          </div>
+        </div>
+        <div class="form-input">
+          <input
+            type="password"
+            placeholder="Şifre"
+            name="username"
+            [(ngModel)]="user.password"
+            #password="ngModel"
+            required
+          />
+          <!-- Error -->
+          <div class="error" *ngIf="password.invalid">
+            <small *ngIf="password.touched && password.errors?.['required']">
+              Bu alan boş bırakılamaz
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Giriş Yap</button>
+    </form>
+  </div>
+</div>

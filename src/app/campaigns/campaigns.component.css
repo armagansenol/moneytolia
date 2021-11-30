@@ -1,0 +1,11 @@
+.campaigns-container {
+  display: grid;
+  grid-template-columns: minmax(250px, 1.5fr) minmax(auto, 8.5fr);
+
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}

@@ -1,0 +1,43 @@
+.wrapper {
+  margin: 2rem 5%;
+}
+
+.campaigns-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.searchbar {
+  width: 300px;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+}
+
+.select {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.list-filter input {
+  outline: none;
+  height: 40px;
+  padding-left: 0.5rem;
+}
+
+.list-filter select {
+  outline: none;
+  height: 40px;
+}

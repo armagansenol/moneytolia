@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <h1>Kampanyalar</h1>
+  <div class="campaigns-list">
+    <div class="list-filter">
+      <input
+        class="searchbar"
+        type="text"
+        name="searchData"
+        [(ngModel)]="searchData"
+        placeholder="Kampanya Arayın"
+      />
+      <select
+        class="select"
+        name="sortCampaigns"
+        [(ngModel)]="sortBy"
+        (ngModelChange)="onSort($event)"
+      >
+        <option value="default" selected disabled hidden>
+          Puana Göre Sırala
+        </option>
+        <option value="ascending">Yüksek Puandan Düşük Puana</option>
+        <option value="descending">Düşük Puandan Yüksek Puana</option>
+      </select>
+    </div>
+
+    <ng-container
+      *ngFor="
+        let campaign of campaigns.reverse() | filter: searchData;
+        let i = index
+      "
+    >
+      <app-campaign-card
+        [campaign]="campaign"
+        (deleteCampaign)="onDelete(campaign)"
+        (updateCampaign)="onUpdate(campaign)"
+        (openModal)="this.isModalOpen = true"
+      ></app-campaign-card>
+    </ng-container>
+  </div>
+</div>
+
+<app-campaigns-modal
+  *ngIf="isModalOpen"
+  [campaign]="campaign"
+  (closeModal)="onCloseModal()"
+></app-campaigns-modal>

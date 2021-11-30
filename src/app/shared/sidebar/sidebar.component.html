@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <ul class="sidebar-list">
+    <li class="list-item" *ngFor="let route of sidebarRoutes">
+      <a [routerLink]="route.routerLink" routerLinkActive="active">{{
+        route.name
+      }}</a>
+    </li>
+  </ul>
+</div>

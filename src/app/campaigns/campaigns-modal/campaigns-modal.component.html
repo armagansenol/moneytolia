@@ -1,0 +1,32 @@
+<div class="backdrop" (click)="onClose()">
+  <div class="modal-content" appClickStopPropagation>
+    <div class="modal-header">
+      <h1>Kampanya Güncelle</h1>
+      <a class="modal-close" (click)="onClose()">Kapat</a>
+    </div>
+    <form
+      class="form flex-col-center"
+      (submit)="onSubmit(campaignUpdateForm)"
+      #campaignUpdateForm="ngForm"
+    >
+      <div class="form-input">
+        <label for="campaignName">Kampanya İsmi</label>
+        <input
+          id="campaignTitle"
+          name="campaignTitle"
+          [(ngModel)]="campaignTitle"
+          type="text"
+        />
+      </div>
+      <div class="form-input">
+        <label for="campaignDescription">Kampanya Açıklaması</label>
+        <textarea
+          id="campaignDescription"
+          name="campaignDescription"
+          [(ngModel)]="campaignDescription"
+        ></textarea>
+      </div>
+      <button type="submit">Güncelle</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="campaign-card">
+  <div class="campaign-rating flex-col-center">
+    <div class="rating flex-col-center">
+      <p>{{ campaign.rating }}</p>
+      <small>Puan</small>
+    </div>
+    <div class="rating-buttons flex-row-center">
+      <div (click)="onRatingUpdate('decrease')">
+        <img src="../../../assets/icons/arrow-down-outline.svg" alt="" />
+      </div>
+      <div (click)="onRatingUpdate('increase')">
+        <img src="../../../assets/icons/arrow-up-outline.svg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="campaign-content">
+    <small>Oluşturulma Tarihi: {{ campaign.date | date: "medium" }}</small>
+    <h2>{{ campaign.title }}</h2>
+    <p>{{ campaign.description }}</p>
+    <div class="campaign-actions">
+      <button (click)="onUpdate()">Güncelle</button>
+      <button (click)="onDelete()">Sil</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.campaign-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) 8.5fr;
+  gap: 1rem;
+
+  width: 100%;
+  padding: 1rem;
+  background: rgb(252, 252, 252);
+  border-radius: 1rem;
+  border: 1px solid lightgray;
+}
+
+.campaign-rating {
+  gap: 1rem;
+  border: 1px solid rgb(230, 230, 230);
+  background: rgb(242, 242, 242);
+  border-radius: 0.5rem;
+}
+
+.rating > p {
+  color: orangered;
+  font-weight: 900;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.rating > small {
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.campaign-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.campaign-content small {
+  font-size: 0.75rem;
+  color: gray;
+  margin-left: auto;
+}
+
+.campaign-content h2,
+p {
+  word-break: break-all;
+}
+
+.rating-buttons {
+  gap: 0.5rem;
+}
+
+.rating-buttons div {
+  border: none;
+  border-radius: 50%;
+  transition: 0.1s all ease;
+  cursor: pointer;
+}
+
+.rating-buttons div > img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rating-buttons div:hover {
+  transform: scale(1.5);
+}
+
+.campaign-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.campaign-actions button {
+  display: grid;
+  place-items: center;
+
+  background: orangered;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.campaign-actions button:nth-child(1) {
+  background: rgb(56, 56, 172);
+}
+
+.campaign-actions button:nth-child(2) {
+  background: rgb(230, 22, 22);
+}

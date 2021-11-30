@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-moneytolia {
+  background: rgb(253, 29, 29);
+  background: -moz-linear-gradient(
+    35deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 82%,
+    rgba(255, 197, 115, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    35deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 82%,
+    rgba(255, 197, 115, 1) 100%
+  );
+  background: linear-gradient(
+    35deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 82%,
+    rgba(255, 197, 115, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fd1d1d",endColorstr="#ffc573",GradientType=1);
+}
+
+.bg-main {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+:root {
+  --header-height: 70px;
+}
