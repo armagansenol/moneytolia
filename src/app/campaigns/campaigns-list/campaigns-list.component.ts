@@ -1,4 +1,4 @@
-import { transition020, transition015 } from './../../animations';
+import { transition015 } from './../../animations';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Campaign, ICampaign } from 'src/app/core/models/campaign.model';
@@ -53,22 +53,6 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
     this.campaign = selectedCampaign;
     this.campaignsService.updateCampaign(this.campaign);
   }
-
-  /*   onSort(orderType: string, key: string) {
-    this.sortObjectArrayByKey(this.campaigns, key, orderType);
-  }
-
-  sortObjectArrayByKey(arr: any[], key: string, order: string) {
-    if (order === 'ascending') {
-      arr.sort((a, b) => {
-        return a[key] - b[key];
-      });
-    } else if (order === 'descending') {
-      arr.sort((a, b) => {
-        return b[key] - a[key];
-      });
-    }
-  } */
 
   onCloseModal() {
     this.isModalOpen = false;

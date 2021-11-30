@@ -22,7 +22,6 @@ export class LoggedInGuard implements CanActivate {
         this.isAuth = status;
       }
     );
-    console.log(this.isAuth);
   }
 
   canActivate(
