@@ -1,5 +1,5 @@
 <div class="login-wrapper flex-row-center">
-  <div class="form-wrapper flex-col-center">
+  <div class="form-wrapper flex-col-center bg-moneytolia">
     <h1>Moneytolia</h1>
     <form
       class="form flex-col-center"
@@ -17,8 +17,8 @@
             required
           />
           <!-- Error -->
-          <div class="error" *ngIf="username.invalid">
-            <small *ngIf="username.touched && username.errors?.['required']">
+          <div class="error" *ngIf="username.invalid && username.touched">
+            <small *ngIf="username.hasError('required')">
               Bu alan boş bırakılamaz
             </small>
           </div>
@@ -27,14 +27,14 @@
           <input
             type="password"
             placeholder="Şifre"
-            name="username"
+            name="password"
             [(ngModel)]="user.password"
             #password="ngModel"
             required
           />
           <!-- Error -->
-          <div class="error" *ngIf="password.invalid">
-            <small *ngIf="password.touched && password.errors?.['required']">
+          <div class="error" *ngIf="password.invalid && password.touched">
+            <small *ngIf="password.hasError('required')">
               Bu alan boş bırakılamaz
             </small>
           </div>
