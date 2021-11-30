@@ -36,6 +36,7 @@ textarea {
   background: #ffffff;
   outline: none;
   padding: 1rem;
+  resize: vertical;
 }
 
 .form-input input {

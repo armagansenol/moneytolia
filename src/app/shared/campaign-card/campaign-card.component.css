@@ -4,6 +4,7 @@
   gap: 1rem;
 
   width: 100%;
+  min-height: 210px;
   padding: 1rem;
   background: rgb(252, 252, 252);
   border-radius: 1rem;
