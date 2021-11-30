@@ -20,7 +20,7 @@
 
     <ng-container
       *ngFor="
-        let campaign of campaigns | filter: searchData | sort: sortBy;
+        let campaign of campaigns | filter: searchData | sort: sortBy:'rating';
         let i = index
       "
     >
