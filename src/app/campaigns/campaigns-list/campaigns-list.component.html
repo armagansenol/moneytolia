@@ -24,10 +24,7 @@
     </div>
 
     <ng-container
-      *ngFor="
-        let campaign of campaigns.reverse() | filter: searchData;
-        let i = index
-      "
+      *ngFor="let campaign of campaigns | filter: searchData; let i = index"
     >
       <app-campaign-card
         [campaign]="campaign"
