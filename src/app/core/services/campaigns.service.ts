@@ -10,12 +10,10 @@ export class CampaignsService {
   private campaignsSubject = new BehaviorSubject<ICampaign[]>(this.campaigns);
   getCampaigns = this.campaignsSubject.asObservable();
 
-  constructor() {
-    //this.campaigns = JSON.parse(localStorage.getItem('campaigns') || '[]');
-  }
+  constructor() {}
 
   addCampaign(campaign: ICampaign) {
-    this.campaigns = [...this.campaigns, campaign];
+    this.campaigns = [campaign, ...this.campaigns];
 
     this.setCampaigns(this.campaigns);
   }

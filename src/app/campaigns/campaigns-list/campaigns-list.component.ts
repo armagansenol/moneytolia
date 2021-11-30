@@ -36,6 +36,8 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
         _id: 'örnekId',
       });
     }
+
+    this.sortBy = 'default';
   }
 
   onDelete(selectedCampaign: ICampaign) {
@@ -43,6 +45,9 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
   }
 
   onUpdate(selectedCampaign: ICampaign) {
+    if (this.sortBy !== 'default') {
+      this.sortBy = 'default';
+    }
     this.campaign = selectedCampaign;
     this.campaignsService.updateCampaign(this.campaign);
   }
