@@ -9,12 +9,7 @@
         [(ngModel)]="searchData"
         placeholder="Kampanya Arayın"
       />
-      <select
-        class="select"
-        name="sortCampaigns"
-        [(ngModel)]="sortBy"
-        (ngModelChange)="onSort($event, 'rating')"
-      >
+      <select class="select" name="sortCampaigns" [(ngModel)]="sortBy">
         <option value="default" selected disabled hidden>
           Puana Göre Sırala
         </option>
@@ -24,7 +19,10 @@
     </div>
 
     <ng-container
-      *ngFor="let campaign of campaigns | filter: searchData; let i = index"
+      *ngFor="
+        let campaign of campaigns | sort: sortBy | filter: searchData;
+        let i = index
+      "
     >
       <app-campaign-card
         [campaign]="campaign"

@@ -12,13 +12,18 @@ export class SortPipe implements PipeTransform {
       return items;
     }
 
+    const sorted = this.sort(items, order);
+    return sorted;
+  }
+
+  sort(items: any[], order: string) {
     if (order === 'ascending') {
       return items.sort((a: ICampaign, b: ICampaign) => {
-        return b.rating - a.rating;
+        return a.rating - b.rating;
       });
     } else if (order === 'descending') {
       return items.sort((a: ICampaign, b: ICampaign) => {
-        return a.rating - b.rating;
+        return b.rating - a.rating;
       });
     } else {
       return items;

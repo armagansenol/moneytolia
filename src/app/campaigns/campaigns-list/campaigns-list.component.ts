@@ -54,7 +54,7 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
     this.campaignsService.updateCampaign(this.campaign);
   }
 
-  onSort(orderType: string, key: string) {
+  /*   onSort(orderType: string, key: string) {
     this.sortObjectArrayByKey(this.campaigns, key, orderType);
   }
 
@@ -68,7 +68,7 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
         return b[key] - a[key];
       });
     }
-  }
+  } */
 
   onCloseModal() {
     this.isModalOpen = false;
