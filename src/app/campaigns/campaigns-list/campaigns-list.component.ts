@@ -1,3 +1,4 @@
+import { transition020, transition015 } from './../../animations';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Campaign, ICampaign } from 'src/app/core/models/campaign.model';
@@ -7,6 +8,7 @@ import { CampaignsService } from 'src/app/core/services/campaigns.service';
   selector: 'app-campaigns-list',
   templateUrl: './campaigns-list.component.html',
   styleUrls: ['./campaigns-list.component.css'],
+  animations: [transition015],
 })
 export class CampaignsListComponent implements OnInit, OnDestroy {
   private campaignsSubscription: Subscription = new Subscription();
@@ -52,8 +54,8 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
     this.campaignsService.updateCampaign(this.campaign);
   }
 
-  onSort(orderType: string, by: string) {
-    this.sortObjectArrayByKey(this.campaigns, by, orderType);
+  onSort(orderType: string, key: string) {
+    this.sortObjectArrayByKey(this.campaigns, key, orderType);
   }
 
   sortObjectArrayByKey(arr: any[], key: string, order: string) {

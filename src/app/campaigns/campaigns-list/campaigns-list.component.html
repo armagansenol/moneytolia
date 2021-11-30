@@ -38,6 +38,7 @@
 
 <app-campaigns-modal
   *ngIf="isModalOpen"
+  [@inOutAnimation0.15]
   [campaign]="campaign"
   (closeModal)="onCloseModal()"
 ></app-campaigns-modal>
