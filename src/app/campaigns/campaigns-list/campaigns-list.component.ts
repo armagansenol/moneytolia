@@ -52,14 +52,8 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
     this.campaignsService.updateCampaign(this.campaign);
   }
 
-  onSort(orderType: string) {
-    if (orderType === 'ascending') {
-      return this.sortObjectArrayByKey(this.campaigns, 'rating', orderType);
-    } else if (orderType === 'descending') {
-      return this.sortObjectArrayByKey(this.campaigns, 'rating', orderType);
-    } else {
-      return this.campaigns;
-    }
+  onSort(orderType: string, by: string) {
+    this.sortObjectArrayByKey(this.campaigns, by, orderType);
   }
 
   sortObjectArrayByKey(arr: any[], key: string, order: string) {

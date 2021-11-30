@@ -14,7 +14,6 @@ export class CampaignsService {
 
   addCampaign(campaign: ICampaign) {
     this.campaigns = [campaign, ...this.campaigns];
-
     this.setCampaigns(this.campaigns);
   }
 
@@ -26,7 +25,6 @@ export class CampaignsService {
         return campaign;
       }
     });
-
     this.setCampaigns(this.campaigns);
   }
 
@@ -34,7 +32,6 @@ export class CampaignsService {
     this.campaigns = this.campaigns.filter((campaign) => {
       return campaign._id !== selectedCampaign._id;
     });
-
     this.setCampaigns(this.campaigns);
   }
 
