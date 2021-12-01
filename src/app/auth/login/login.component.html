@@ -17,7 +17,13 @@
             required
           />
           <!-- Error -->
-          <div class="error" *ngIf="username.invalid && username.touched">
+          <div
+            class="error"
+            *ngIf="
+              (username.invalid && username.touched) ||
+              (loginForm.invalid && loginForm.submitted)
+            "
+          >
             <small *ngIf="username.hasError('required')">
               Bu alan boş bırakılamaz
             </small>
@@ -33,7 +39,13 @@
             required
           />
           <!-- Error -->
-          <div class="error" *ngIf="password.invalid && password.touched">
+          <div
+            class="error"
+            *ngIf="
+              (password.invalid && password.touched) ||
+              (loginForm.invalid && loginForm.submitted)
+            "
+          >
             <small *ngIf="password.hasError('required')">
               Bu alan boş bırakılamaz
             </small>
