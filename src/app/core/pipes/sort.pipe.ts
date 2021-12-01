@@ -1,4 +1,3 @@
-import { ICampaign } from './../models/campaign.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

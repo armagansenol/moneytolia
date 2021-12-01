@@ -47,7 +47,7 @@ export class CampaignsListComponent implements OnInit, OnDestroy {
   }
 
   onUpdate(selectedCampaign: ICampaign) {
-    if (this.sortBy !== 'default') {
+    if (this.sortBy !== 'default' && this.searchData === '') {
       this.sortBy = 'default';
     }
     this.campaign = selectedCampaign;
